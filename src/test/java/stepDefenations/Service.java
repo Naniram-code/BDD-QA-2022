@@ -75,12 +75,12 @@ public class Service extends MainClass {
 
 	@Then("User should see “Job Placement Is Our Strength “  Text")
 	public void user_should_see_job_placement_is_our_strength_text() {
-		Set<String> windows = driver.getWindowHandles(); // [parentid,childid,]
-		Iterator<String> it = windows.iterator();
-		it.next();
-		String childId = it.next();
-		driver.switchTo().window(childId);
-		WebElement aaa = driver.findElement(By.cssSelector("div h2[xpath='1']"));
+		
+		  Set<String> windows = driver.getWindowHandles(); // [parentid,childid,]
+		  Iterator<String> it = windows.iterator(); it.next(); String childId =
+		  it.next(); driver.switchTo().window(childId);
+		 
+		WebElement aaa = driver.findElement(By.xpath("//h2[normalize-space()='Job Placement']"));
 		String actualText = aaa.getText();
 		String Expectedtext =Aprop.getProperty("expectedjp");
 		Assert.assertEquals(actualText, Expectedtext);

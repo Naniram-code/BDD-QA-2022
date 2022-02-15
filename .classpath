@@ -23,15 +23,6 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/Users/nanirambhujel/.m2/repository/io/cucumber/cucumber-core/7.1.0/cucumber-core-7.1.0.jar" sourcepath="/Users/nanirambhujel/.m2/repository/io/cucumber/cucumber-core/7.1.0/cucumber-core-7.1.0-sources.jar">
-		<attributes>
-			<attribute name="maven.pomderived" value="true"/>
-			<attribute name="maven.groupId" value="io.cucumber"/>
-			<attribute name="maven.artifactId" value="cucumber-core"/>
-			<attribute name="maven.version" value="7.1.0"/>
-			<attribute name="maven.scope" value="compile"/>
-		</attributes>
-	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

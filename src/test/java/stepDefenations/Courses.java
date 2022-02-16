@@ -75,10 +75,10 @@ public class Courses extends MainClass{
 		Assert.assertEquals(actualTextQA,expectedTextQA); 
 	}
 
-	@And("User should see register menu")
-	public void user_should_see_register_menu() {
+	@And("User should see register form")
+	public void user_should_see_register_form() {
 		
-		WebElement rg =driver.findElement(By.xpath("(//span[@class='elementor-button-text'])[1]"));
+		WebElement rg =driver.findElement(By.xpath("//button[@type='submit']"));
 		String ActualregisterText=rg.getText();
 		String  expecterdregisterText=Aprop.getProperty("Registertx");
 		Assert.assertEquals(ActualregisterText,expecterdregisterText); 
@@ -113,20 +113,28 @@ public class Courses extends MainClass{
 
 	@When("User Click  Master Ethical Hacking option")
 	public void user_click_master_ethical_hacking_option() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		Actions action = new Actions(driver);
+		WebElement ME = driver.findElement(By.linkText("Courses"));
+		action.moveToElement(ME).click().build().perform();
+		WebElement EH= driver.findElement(By.linkText("Master Ethical Hacking"));
+		action.moveToElement(EH);
+		action.doubleClick().build().perform();
 	}
 
 	@Then("User should see “Master Ethical Hacking & Cyber Security” Text")
 	public void user_should_see_master_ethical_hacking_cyber_security_text() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		WebElement MEH = driver.findElement(By.xpath("(//h2[@class='elementor-heading-title elementor-size-default'])[1]"));
+		String actualTextBA =MEH.getText();
+		String expectedTextBA=Aprop.getProperty("ExpectedMEHText");
+		Assert.assertEquals(actualTextBA,expectedTextBA);
 	}
 
 	@And("User should see title page “Master Ethical Hacking training Course in NYC -ECH” title page Academy")
 	public void user_should_see_title_page_master_ethical_hacking_training_course_in_nyc_ech_title_page_academy() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	     String actualtitlepageME=driver.getTitle();
+	     String expectedtitlepageME=Aprop.getProperty("expectedtitlepageMEH");
+	     Assert.assertEquals(actualtitlepageME,expectedtitlepageME);
+	     driver.navigate().back();
 	}
 
 }

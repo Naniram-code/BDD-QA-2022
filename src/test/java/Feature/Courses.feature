@@ -29,7 +29,7 @@ When User Click on QA Engineering option
 
 Then User should see “ Full stack QA Engineering Course “Text 
 
-And User should see register menu
+And User should see register form
 
 #Acceptance Criteria #4
 

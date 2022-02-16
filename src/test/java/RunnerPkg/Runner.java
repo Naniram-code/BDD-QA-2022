@@ -9,9 +9,9 @@
   @RunWith(Cucumber.class) //import from junit
   
   // 2. Cucumber options to use multiple options -> @CucumberOptions
-//@CucumberOptions(features="/Users/nanirambhujel/eclipse-workspace/QA_2022_BDD/src/test/java/Feature",
+@CucumberOptions(features="/Users/nanirambhujel/eclipse-workspace/QA_2022_BDD/src/test/java/Feature",
   
-@CucumberOptions(features="/Users/nanirambhujel/eclipse-workspace/QA_2022_BDD/src/test/java/Feature/Courses.feature",  // Path of Feature file
+//@CucumberOptions(features="/Users/nanirambhujel/eclipse-workspace/QA_2022_BDD/src/test/java/Feature/Courses.feature",  // Path of Feature file
  
  //@CucumberOptions(features="/Users/nanirambhujel/eclipse-workspace/QA_2022_BDD/src/test/java/Feature/ABOUTUS.feature",    //Path of AboutUS file            
 

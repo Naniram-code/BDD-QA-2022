@@ -108,17 +108,20 @@ public class Courses extends MainClass{
 		     String actualtitlepageBA=driver.getTitle();
 		     String expectedtitlepageBA=Aprop.getProperty("expectedtitlepageBA");
 		     Assert.assertEquals(actualtitlepageBA,expectedtitlepageBA);
-		     driver.navigate().back();
+		     //driver.navigate().back();
 	            }
 
 	@When("User Click  Master Ethical Hacking option")
 	public void user_click_master_ethical_hacking_option() {
 		Actions action = new Actions(driver);
 		WebElement ME = driver.findElement(By.linkText("Courses"));
-		action.moveToElement(ME).click().build().perform();
+		action.moveToElement(ME);
+		action.click();
+		action.build().perform();
 		WebElement EH= driver.findElement(By.linkText("Master Ethical Hacking"));
 		action.moveToElement(EH);
-		action.doubleClick().build().perform();
+		action.doubleClick();
+		action.build().perform();
 	}
 
 	@Then("User should see “Master Ethical Hacking & Cyber Security” Text")

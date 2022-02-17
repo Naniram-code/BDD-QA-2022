@@ -15,7 +15,7 @@
  
  //@CucumberOptions(features="/Users/nanirambhujel/eclipse-workspace/QA_2022_BDD/src/test/java/Feature/ABOUTUS.feature",    //Path of AboutUS file            
 
- // @CucumberOptions(features="/Users/nanirambhujel/eclipse-workspace/QA_2022_BDD/src/test/java/Feature/Courses.feature",   //Path of Course File 
+ //@CucumberOptions(features="/Users/nanirambhujel/eclipse-workspace/QA_2022_BDD/src/test/java/Feature/Courses.feature",   //Path of Course File 
  
   //@CucumberOptions(features="/Users/nanirambhujel/eclipse-workspace/QA_2022_BDD/src/test/java/Feature/Service.feature",   //Path of service file
   glue="stepDefenations",monochrome=true,

@@ -19,15 +19,18 @@ public class Service extends MainClass {
 	public void user_navigate_mouse_curser_on_dynamic_drop_down_service_menu() {
 		Actions action = new Actions(driver);
 		WebElement service = driver.findElement(By.linkText("Service"));
-		action.moveToElement(service).build().perform();
+		action.moveToElement(service).click().build().perform();
 	}
 
 	@Then("User should move mouse Up and down in two optoin")
 	public void user_should_move_mouse_up_and_down_in_two_optoin() {
 		Actions action = new Actions(driver);
-		action.sendKeys(Keys.DOWN);
-		action.sendKeys(Keys.DOWN);
-		action.sendKeys(Keys.UP);
+		WebElement s = driver.findElement(By.linkText("IT Training"));
+		WebElement ss = driver.findElement(By.linkText("Job Placement"));
+		//WebElement sss= driver.findElement(By.linkText(""));
+		action.moveToElement(s).build().perform();
+		action.moveToElement(ss).build().perform();
+	
 	}
 
 	@When("User click  drop down Option link IT Training")
@@ -41,17 +44,17 @@ public class Service extends MainClass {
 
 	@Then("User should see “IT Traning “  Text")
 	public void user_should_see_it_traning_text() {
-		Set<String> windows = driver.getWindowHandles(); // [parentid,childid,subchildId]
-		Iterator<String> it = windows.iterator();
-		it.next();
-		String childId = it.next();
-
-		driver.switchTo().window(childId);
-		WebElement aaa = driver.findElement(By.xpath("//h2[contains(text(),'IT Traning')]"));
-		String actualText = aaa.getText();
 		
-		String Expectedtext =Aprop.getProperty("ExpectedTextIT");
-		Assert.assertEquals(actualText, Expectedtext);
+		  Set<String> windows = driver.getWindowHandles(); //[parentid,childid,subchildId] 
+		  Iterator<String> it = windows.iterator();
+		  it.next(); 
+		  String childId = it.next();
+		  driver.switchTo().window(childId);
+		 WebElement aaa = driver.findElement(By.xpath("//h2[contains(text(),'IT Traning')]"));
+		 String actualText = aaa.getText();
+		
+		 String Expectedtext =Aprop.getProperty("ExpectedTextIT");
+		 Assert.assertEquals(actualText, Expectedtext);
 	}
 
 	@And("User should see Title Page “IT Certification and Training Programs in NYC|Transfotech Academy”")
@@ -60,9 +63,7 @@ public class Service extends MainClass {
 		String actualPageTitle = driver.getTitle();
 		Assert.assertEquals(actualPageTitle, expectedPageTitle);
 		driver.navigate().back();
-		
-		
-	}
+		}
 
 	@When("User click  drop down Option link Job Placement")
 	public void user_click_drop_down_option_link_job_placement() {
